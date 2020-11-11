@@ -41,4 +41,16 @@ class Market
     breakdown
   end
 
+  def overstocked_items
+    total_inventory.find_all do |item, stats|
+        stats[:quantity] > 50 && stats[:vendors].size > 1
+    end
+  end
+
+  def sorted_item_list
+    total_inventory.keys.map do |item|
+      item.name
+    end.sort
+  end
+
 end
