@@ -107,7 +107,6 @@ class MarketTest < Minitest::Test
   end
 
   def test_overstocked_items
-    skip
     market = Market.new("South Pearl Street Farmers Market")
     vendor1 = Vendor.new("Rocky Mountain Fresh")
     vendor2 = Vendor.new("Ba-Nom-a-Nom")

@@ -21,5 +21,4 @@ class Vendor
       (item.price.delete("$").to_f * amount).round(2)
     end
   end
-
 end
