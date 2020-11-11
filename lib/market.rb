@@ -42,9 +42,9 @@ class Market
   end
 
   def overstocked_items
-    total_inventory.find_all do |item, stats|
+    total_inventory.select do |item, stats|
         stats[:quantity] > 50 && stats[:vendors].size > 1
-    end
+    end.keys
   end
 
   def sorted_item_list
